@@ -1,0 +1,33 @@
+.ProductItem-wrapper {
+    display: flex;
+}
+.ProductItem {
+    padding: 20px;
+}
+.ProductItem button {
+    border-radius: 8px;
+
+    padding: 10px;
+    background: blueviolet;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.ProductItem button:hover {
+    background: rgba(137, 43, 226, 0.481);
+    transition: all .3s ease-out;;
+    color: rgb(67, 67, 67);
+}
+.item-info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.item-info span{
+    padding: 10px;
+    font-size: 20px;
+}

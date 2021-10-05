@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import ProductsList from './components/list/ProductsList';
+import ProductItem from './components/item/ProductItem';
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+        <div className="App">
+
+        <header className="header">
+          <a className="header-title" href="/product-list/">Product List</a>
+        </header>
+          <main>
+            <Switch>
+              <Route exact path='/product-list/' component={ProductsList}/>
+              <Route path='/product/:id' component={ProductItem}/>
+            </Switch>
+          </main>
+        <footer>
+          <div className="foote-box">
+            <h1> DEVELOPER: OLEH KALYNOVSKYI </h1>
+            <a href="mailto:oleh.kalynovskyi@gmail.com">Contact me: oleh.kalynovskyi@gmail.com</a>
+            <a href="https://github.com/oleh-kalynovskyi">My portfolio on Github</a>
+          </div>
+        </footer>
+
+        </div>
+      </BrowserRouter>
   );
 }
-
 export default App;
