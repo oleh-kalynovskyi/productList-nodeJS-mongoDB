@@ -13,11 +13,11 @@ function App() {
         <div className="App">
 
         <header className="header">
-          <a className="header-title" href="/product-list/">Product List</a>
+          <a className="header-title" href="/productList-nodeJS-mongoDB/">Product List</a>
         </header>
           <main>
             <Switch>
-              <Route exact path='/product-list/' component={ProductsList}/>
+              <Route exact path='/productList-nodeJS-mongoDB/' component={ProductsList}/>
               <Route path='/product/:id' component={ProductItem}/>
             </Switch>
           </main>
