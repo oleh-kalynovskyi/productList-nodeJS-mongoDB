@@ -27,7 +27,7 @@ class PostController {
             const post = await Post.findById(id);
             return res.json(post);
         } catch (e) {
-            res.status(500).json(e.message)
+            res.status(500).json(e.message) 
         }
     }
     async upDate(req, res) {
