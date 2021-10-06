@@ -32,8 +32,17 @@ export default function Edit({close, idItem, upDateInfo}) {
         })
         .catch( () => console.log("error") );
     }, [])
+    
+    //   const handleChange = (e) => {
+    //     const value = e.target.value;
+    //     setItem({
+    //         ...item,
+    //         [e.target.name]: value, 
+    //     });
+    //   }
+    // onChange={ handleChange } 
 
-    const [item, seItem] = useState('')
+    const [item, setItem] = useState('')
 
     return (
         <div onClick={ close } className="Edit-box">
@@ -47,46 +56,52 @@ export default function Edit({close, idItem, upDateInfo}) {
                     <label>
                         Img 
                         <input 
+                            name="imageUrl"
                             type="text" 
                             value={ item && item.imageUrl}
-                            onChange={(e) => seItem({...item, imageUrl: e.target.value})} 
+                            onChange={ handleChange } 
                         />
                     </label>
                     <label>
                         Product name
                         <input 
                             type="text" 
+                            name="ProductName"
                             value={item && item.ProductName}
-                            onChange={(e) => seItem({...item, ProductName: e.target.value})} 
+                            onChange={ handleChange } 
                         />
                     </label>
                     <label>
                         Count
                         <input 
+                            name="Count"
                             type="text" 
                             value={item && item.Count}
-                            onChange={(e) => seItem({...item, Count: e.target.value})} 
+                            onChange={ handleChange } 
                         />
                     </label>
                     <label>
                         Size
                         <input 
+                            name="Width"
                             type="text" 
                             value={item && item.Width}
-                            onChange={(e) => seItem({...item, Width: e.target.value})} 
+                            onChange={ handleChange }
                         />
                         <input 
+                            name="Height"
                             type="text" 
                             value={item && item.Height}
-                            onChange={(e) => seItem({...item, Height: e.target.value})} 
+                            onChange={ handleChange }
                         />
                     </label>
                     <label>
                         Wight
                         <input 
+                            name="Wight"
                             type="text" 
                             value={item && item.Weight}
-                            onChange={(e) => seItem({...item, Weight: e.target.value})} 
+                            onChange={ handleChange }
                         />
                     </label>
                     <button>Seve change</button>
