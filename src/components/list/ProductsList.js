@@ -70,39 +70,53 @@ export default function ProductsList() {
         .catch( () => console.log("error") );
     }, [openAddItem, OpenRemove]) 
 
-
+console.log(ProductsList.length);
     return (
         <div className="ProductsList">
             <div className="add-buttom">
-                <button onClick={ ()=> setOpenAddItem(true) }>Add new Product</button>
+                <button 
+                    onClick={ ()=> setOpenAddItem(true) }
+                    style={{ 
+                        color: ProductsList.length > 0 ? "white" : "red", 
+                        border: ProductsList.length > 0 ? "none" : "1px solid red" 
+                    }}
+                    >Add new Product</button>
                 <button onClick={ ()=> {ByAvailable(); setSortByAvailable(!sortByAvailable)} }>Available Products</button>
                 <button onClick={ ()=> {ByName(); setSortByName(!sortByName)} }>Sort by alphabet</button>
             </div>
             <div className="ProductsList-wrapper">
-                {
-                ProductsList && ProductsList.map( item => {
-                    return(
-                        <div
-                            className="ProductsList-item" 
-                            key={item._id}>
 
-                            <Link to={'/product/' + item._id}  >
+                {ProductsList.length > 0 
+                    ? 
+                    ProductsList && ProductsList.map( item => {
+                        return(
+                            <div
+                                className="ProductsList-item" 
+                                key={item._id}>
 
-                            <div className="ProductsList-item-img">
-                                <img src={item.imageUrl || NOPHOTO } alt="" width="100%" height="100%"/>
+                                <Link to={'/product/' + item._id}  >
+
+                                <div className="ProductsList-item-img">
+                                    <img src={item.imageUrl || NOPHOTO } alt="" width="100%" height="100%"/>
+                                </div>
+
+                                <div className="ProductsList-item-info">
+                                    <span>Product: {item.ProductName || 'Soon will be add'}</span>
+                                    <span>Available: {item.Count || 'Soon will be add'}</span>
+                                </div>
+
+                                </Link>
+
+                                <button onClick={ () => {setOpenRemove(true); setRemoveID(item._id)} }>X</button>
                             </div>
-
-                            <div className="ProductsList-item-info">
-                                <span>Product: {item.ProductName || 'Soon will be add'}</span>
-                                <span>Available: {item.Count || 'Soon will be add'}</span>
-                            </div>
-
-                            </Link>
-
-                            <button onClick={ () => {setOpenRemove(true); setRemoveID(item._id)} }>X</button>
-                        </div>
-                    )
-                })
+                        )
+                    })
+                    : 
+                    <div
+                        style={{fontSize:'20px'}}
+                        >
+                        List is empty, add product [click on red button]
+                    </div>
                 }
             </div>
             {openAddItem ? <AddItem close={ () => setOpenAddItem(false) }/> : null}
