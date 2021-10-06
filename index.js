@@ -13,7 +13,7 @@ app.use('/api', router)
 async function startApp() {
     try {
         await mongoose.connect( process.env.DB_URL || DB_URL, {useUnifiedTopology: true, useNewUrlParser: true})
-        app.listen( process.env.PORT  || 5000, console.log('Server work') )
+        app.listen( process.env.PORT || 5000, console.log('Server work') )
     } catch (error) {
         console.log(error);
     }
