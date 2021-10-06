@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/productList-nodeJS-mongoDB/static/css/main.5ce39a55.chunk.css",
-    "main.js": "/productList-nodeJS-mongoDB/static/js/main.23b25448.chunk.js",
-    "main.js.map": "/productList-nodeJS-mongoDB/static/js/main.23b25448.chunk.js.map",
-    "runtime-main.js": "/productList-nodeJS-mongoDB/static/js/runtime-main.1426e4b3.js",
-    "runtime-main.js.map": "/productList-nodeJS-mongoDB/static/js/runtime-main.1426e4b3.js.map",
-    "static/js/2.96ba225b.chunk.js": "/productList-nodeJS-mongoDB/static/js/2.96ba225b.chunk.js",
-    "static/js/2.96ba225b.chunk.js.map": "/productList-nodeJS-mongoDB/static/js/2.96ba225b.chunk.js.map",
-    "index.html": "/productList-nodeJS-mongoDB/index.html",
-    "static/css/main.5ce39a55.chunk.css.map": "/productList-nodeJS-mongoDB/static/css/main.5ce39a55.chunk.css.map",
-    "static/js/2.96ba225b.chunk.js.LICENSE.txt": "/productList-nodeJS-mongoDB/static/js/2.96ba225b.chunk.js.LICENSE.txt"
+    "main.css": "/oleh-kalynovskyi/productList-nodeJS-mongoDB/static/css/main.5ce39a55.chunk.css",
+    "main.js": "/oleh-kalynovskyi/productList-nodeJS-mongoDB/static/js/main.b2862cc8.chunk.js",
+    "main.js.map": "/oleh-kalynovskyi/productList-nodeJS-mongoDB/static/js/main.b2862cc8.chunk.js.map",
+    "runtime-main.js": "/oleh-kalynovskyi/productList-nodeJS-mongoDB/static/js/runtime-main.1426e4b3.js",
+    "runtime-main.js.map": "/oleh-kalynovskyi/productList-nodeJS-mongoDB/static/js/runtime-main.1426e4b3.js.map",
+    "static/js/2.96ba225b.chunk.js": "/oleh-kalynovskyi/productList-nodeJS-mongoDB/static/js/2.96ba225b.chunk.js",
+    "static/js/2.96ba225b.chunk.js.map": "/oleh-kalynovskyi/productList-nodeJS-mongoDB/static/js/2.96ba225b.chunk.js.map",
+    "index.html": "/oleh-kalynovskyi/productList-nodeJS-mongoDB/index.html",
+    "static/css/main.5ce39a55.chunk.css.map": "/oleh-kalynovskyi/productList-nodeJS-mongoDB/static/css/main.5ce39a55.chunk.css.map",
+    "static/js/2.96ba225b.chunk.js.LICENSE.txt": "/oleh-kalynovskyi/productList-nodeJS-mongoDB/static/js/2.96ba225b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1426e4b3.js",
     "static/js/2.96ba225b.chunk.js",
     "static/css/main.5ce39a55.chunk.css",
-    "static/js/main.23b25448.chunk.js"
+    "static/js/main.b2862cc8.chunk.js"
   ]
 }
