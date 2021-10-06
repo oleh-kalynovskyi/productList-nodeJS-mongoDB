@@ -36,7 +36,6 @@ export default function ProductsList() {
     const [sortByName, setSortByName] = useState(null)
     const ByName = () => {
         try {
-            // const numberArray = ProductsList;
             const byNames = ProductsList.slice(0);
             const byNamess = ProductsList.slice(0);
             byNames.sort(function(a,b) { // start from A
@@ -70,7 +69,6 @@ export default function ProductsList() {
         .catch( () => console.log("error") );
     }, [openAddItem, OpenRemove]) 
 
-console.log(ProductsList.length);
     return (
         <div className="ProductsList">
             <div className="add-buttom">
