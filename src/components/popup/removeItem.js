@@ -19,7 +19,7 @@ export default function RemoveItem({close, removeID}) {
                 className="AddItem-wrapper"
                 style={{ display: 'flex', flexDirection: "column"}}>
                 <span style={{marginBottom:"10px"}}>Are You sure want remove this Item?</span>
-                <button style={{marginBottom:"10px", background: "#ff5757"}} onClick={ () => removeProducts() }>Yes</button>
+                <button style={{marginBottom:"10px", background: "#ff5757"}} onClick={ removeProducts }>Yes</button>
                 <button onClick={ close }>No</button>
             </div>
         </div>
