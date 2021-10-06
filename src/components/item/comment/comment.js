@@ -7,7 +7,12 @@ const API_URL = 'http://localhost:5000/'
 
 export default function Comment({idItem }) {
 
-    const [CommentOne, setCommentOne] = useState({})
+    const [CommentOne, setCommentOne] = useState({
+        id: null,
+        productId: null,
+        description: null,
+        date: null
+    })
     
     function handleChange(e) {
         const value = e.target.value;
